@@ -1,0 +1,9 @@
+<% content_for(:title, 'Links | HackerClone') %>
+
+<h1>List of links</h1>
+
+<ul>
+  <% @links.each do |link| %>
+    <li><a href='<%= link.content.url %>'><%= link.title %></a></li>
+  <% end %>
+</ul>
