@@ -1,0 +1,9 @@
+
+
+<%= form_for [object, @comment] do |f| %>
+  <div>
+    <%= f.text_area :content %>
+  </div>
+  <%= f.submit :class => 'btn btn-primary' %>
+<% end %>
+

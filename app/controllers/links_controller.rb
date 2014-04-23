@@ -3,6 +3,12 @@ class LinksController < ApplicationController
     @links = Link.all
   end
 
+  def show
+    @link = Link.find(params[:id])
+    @comment = Comment.new
+    render 'comments'
+  end
+
   def new
     @link = Link.new
   end

@@ -1,0 +1,8 @@
+<h1><%= @link.title %></h1>
+
+<%= render 'comments/form', object: @link %>
+
+<% @link.comments.each do |comment| %>
+  <%= render 'comments/show', object: comment %>
+<% end %>
+
