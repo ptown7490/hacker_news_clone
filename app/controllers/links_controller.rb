@@ -16,11 +16,17 @@ class LinksController < ApplicationController
     end
   end
 
+  def destroy
+    @link = Link.find(params[:id])
+    @link.destroy
+    redirect_to links_path
+  end
+
 
 
 private
   def link_params
-    params.require(:link).permit(:title, :content_url) #TODO add :content_url after testing
+    params.require(:link).permit(:title, :content_url)
   end
 
 end

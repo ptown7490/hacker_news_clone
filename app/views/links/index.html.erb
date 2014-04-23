@@ -4,6 +4,7 @@
 
 <ul>
   <% @links.each do |link| %>
-    <li><a href='<%= link.content_url %>'><%= link.title %></a></li>
+    <li><a href='<%= link.content_url %>'><%= link.title %></a> |
+      <%= link_to 'Delete', link_path(link), data: {confirm: 'You sure?', method: 'delete'}, :class => 'btn btn-danger' %></li>
   <% end %>
 </ul>
