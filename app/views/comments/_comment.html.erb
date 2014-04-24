@@ -1,10 +1,9 @@
 
 <div>
   <%= object.content %>
-
   <% if object.comments.any? %>
     <% object.comments.each do |comment| %>
-      <%= render 'show', object: comment %>
+      <%= render 'comment', object: comment %>
     <% end %>
   <% end %>
 </div>

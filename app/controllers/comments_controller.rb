@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def create
     @link = Link.find(params[:link_id])
-    @comment = @link.comments.new(comment_params)
+    @comment = @link.comments.create(comment_params)
     redirect_to link_path(@link)
   end
 

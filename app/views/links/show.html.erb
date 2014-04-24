@@ -3,6 +3,6 @@
 <%= render 'comments/form', object: @link %>
 
 <% @link.comments.each do |comment| %>
-  <%= render 'comments/show', object: comment %>
+  <%= render 'comments/comment', object: comment %>
 <% end %>
 
